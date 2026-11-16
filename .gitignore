@@ -1,0 +1,6 @@
+# regenerable data (ESPN pulls + derived tables): run src/scrape_espn.py + src/build_dataset.py
+data/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
