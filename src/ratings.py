@@ -40,6 +40,10 @@ COMPONENTS = {
     "r3": ("tpa", "fga", False),
     "p3": ("tpm", "tpa", False),
     "p2": ("twm", "twa", False),
+    # market-implied points from previous games' closing lines (top-down feature, experiments only)
+    "mkt": ("mkt_pts", None, False),
+    # log points per possession (multiplicative efficiency; experiments)
+    "lppp": ("lppp_num", "poss", False),
 }
 
 
@@ -57,9 +61,11 @@ class CompParams:
 
 def component_arrays(tg: pd.DataFrame, comp: str):
     num, wcol, shared = COMPONENTS[comp]
-    if comp == "tempo":
-        y = tg["tempo"].to_numpy(float)
-        w = np.ones(len(tg))
+    if wcol is None:
+        # unweighted level component (tempo, market-implied points): weight 1 where observed
+        y = tg[num].to_numpy(float)
+        w = np.isfinite(y).astype(float)
+        y = np.where(np.isfinite(y), y, 0.0)
     else:
         w = tg[wcol].to_numpy(float)
         with np.errstate(divide="ignore", invalid="ignore"):

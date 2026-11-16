@@ -1,89 +1,85 @@
 tip_utc,game,proj_home_margin,proj_total,market,pick,open_price,edge_pts,p_win,ev,now,available_now,mismatch,min_edge,stake_pct
-2026-11-17T00:00Z,Jacksonville Dolphins @ Georgia Bulldogs,19.5,148.4,spread,Georgia Bulldogs -23.5,-105.0,-4.0,0.466,-0.091,-21.5 (-112),True,True,False,0.0
-2026-11-17T00:00Z,Jacksonville Dolphins @ Georgia Bulldogs,19.5,148.4,spread,Jacksonville Dolphins +23.5,-115.0,4.0,0.534,-0.001,+21.5 (-108),False,True,True,0.0
-2026-11-17T00:00Z,Jacksonville Dolphins @ Georgia Bulldogs,19.5,148.4,total,Over 153.5,-115.0,-5.1,0.431,-0.194,152.5 (-115),True,True,False,0.0
-2026-11-17T00:00Z,Jacksonville Dolphins @ Georgia Bulldogs,19.5,148.4,total,Under 153.5,-105.0,5.1,0.569,0.111,152.5 (-105),False,True,True,1.0
-2026-11-17T01:00Z,Montana Grizzlies @ Kansas State Wildcats,15.0,155.1,spread,Kansas State Wildcats -15.5,-105.0,-0.5,0.497,-0.03,-15.5 (-110),True,False,False,0.0
-2026-11-17T01:00Z,Montana Grizzlies @ Kansas State Wildcats,15.0,155.1,spread,Montana Grizzlies +15.5,-115.0,0.5,0.503,-0.059,+15.5 (-110),True,False,False,0.0
-2026-11-17T01:00Z,Montana Grizzlies @ Kansas State Wildcats,15.0,155.1,total,Over 155.5,-115.0,-0.4,0.491,-0.082,153.5 (-115),True,False,False,0.0
-2026-11-17T01:00Z,Montana Grizzlies @ Kansas State Wildcats,15.0,155.1,total,Under 155.5,-105.0,0.4,0.509,-0.007,153.5 (-105),False,False,False,0.0
-2026-11-17T00:00Z,Richmond Spiders @ Virginia Tech Hokies,13.9,153.9,spread,Virginia Tech Hokies -13.5,-118.0,0.4,0.505,-0.066,-12.5 (-115),True,False,False,0.0
-2026-11-17T00:00Z,Richmond Spiders @ Virginia Tech Hokies,13.9,153.9,spread,Richmond Spiders +13.5,-102.0,-0.4,0.495,-0.02,+12.5 (-105),False,False,False,0.0
-2026-11-17T00:00Z,Richmond Spiders @ Virginia Tech Hokies,13.9,153.9,total,Over 155.5,-105.0,-1.6,0.475,-0.072,151.5 (-115),True,False,False,0.0
-2026-11-17T00:00Z,Richmond Spiders @ Virginia Tech Hokies,13.9,153.9,total,Under 155.5,-115.0,1.6,0.525,-0.019,151.5 (-105),False,False,False,0.0
-2026-11-16T23:00Z,Alcorn State Braves @ Maryland Terrapins,26.4,154.4,spread,Maryland Terrapins -34.5,-108.0,-8.1,0.435,-0.162,-35.5 (-105),False,True,False,0.0
-2026-11-16T23:00Z,Alcorn State Braves @ Maryland Terrapins,26.4,154.4,spread,Alcorn State Braves +34.5,-112.0,8.1,0.565,0.069,+35.5 (-115),True,True,True,1.0
-2026-11-16T23:00Z,Alcorn State Braves @ Maryland Terrapins,26.4,154.4,total,Over 152.5,-115.0,1.9,0.521,-0.025,154.5 (-108),False,True,False,0.0
-2026-11-16T23:00Z,Alcorn State Braves @ Maryland Terrapins,26.4,154.4,total,Under 152.5,-105.0,-1.9,0.479,-0.065,154.5 (-112),True,True,False,0.0
-2026-11-17T01:00Z,Western Illinois Leathernecks @ Minnesota Golden Gophers,35.0,140.2,spread,Minnesota Golden Gophers -36.5,-108.0,-1.5,0.49,-0.057,-34.5 (-105),True,True,False,0.0
-2026-11-17T01:00Z,Western Illinois Leathernecks @ Minnesota Golden Gophers,35.0,140.2,spread,Western Illinois Leathernecks +36.5,-112.0,1.5,0.51,-0.034,+34.5 (-115),False,True,False,0.0
-2026-11-17T01:00Z,Western Illinois Leathernecks @ Minnesota Golden Gophers,35.0,140.2,total,Over 138.5,-118.0,1.7,0.519,-0.04,135.5 (-115),True,True,False,0.0
-2026-11-17T01:00Z,Western Illinois Leathernecks @ Minnesota Golden Gophers,35.0,140.2,total,Under 138.5,-102.0,-1.7,0.481,-0.048,135.5 (-105),False,True,False,0.0
-2026-11-16T23:30Z,Prairie View A&M Panthers @ Ohio State Buckeyes,25.7,150.2,spread,Ohio State Buckeyes -34.5,-112.0,-8.8,0.43,-0.186,-32.5 (-115),True,True,False,0.0
-2026-11-16T23:30Z,Prairie View A&M Panthers @ Ohio State Buckeyes,25.7,150.2,spread,Prairie View A&M Panthers +34.5,-108.0,8.8,0.57,0.098,+32.5 (-105),False,True,True,1.0
-2026-11-16T23:30Z,Prairie View A&M Panthers @ Ohio State Buckeyes,25.7,150.2,total,Over 153.5,-115.0,-3.3,0.454,-0.152,154.5 (-115),False,True,False,0.0
-2026-11-16T23:30Z,Prairie View A&M Panthers @ Ohio State Buckeyes,25.7,150.2,total,Under 153.5,-105.0,3.3,0.546,0.066,154.5 (-105),True,True,True,1.0
-2026-11-17T03:00Z,Portland State Vikings @ Saint Mary's Gaels,14.8,147.4,spread,Saint Mary's Gaels -17.5,-118.0,-2.7,0.476,-0.121,-18.5 (-105),False,False,False,0.0
-2026-11-17T03:00Z,Portland State Vikings @ Saint Mary's Gaels,14.8,147.4,spread,Portland State Vikings +17.5,-102.0,2.7,0.524,0.039,+18.5 (-115),True,False,True,0.99
-2026-11-17T03:00Z,Portland State Vikings @ Saint Mary's Gaels,14.8,147.4,total,Over 150.5,-110.0,-3.1,0.456,-0.13,150.5 (-105),True,False,False,0.0
-2026-11-17T03:00Z,Portland State Vikings @ Saint Mary's Gaels,14.8,147.4,total,Under 150.5,-110.0,3.1,0.544,0.039,150.5 (-115),True,False,True,1.0
-2026-11-17T01:00Z,Central Arkansas Bears @ Oklahoma State Cowboys,15.1,157.2,spread,Oklahoma State Cowboys -21.5,-108.0,-6.4,0.443,-0.147,-19.5 (-115),True,True,False,0.0
-2026-11-17T01:00Z,Central Arkansas Bears @ Oklahoma State Cowboys,15.1,157.2,spread,Central Arkansas Bears +21.5,-112.0,6.4,0.557,0.055,+19.5 (-105),False,True,True,1.0
-2026-11-17T01:00Z,Central Arkansas Bears @ Oklahoma State Cowboys,15.1,157.2,total,Over 160.5,-110.0,-3.3,0.455,-0.132,161.5 (-115),False,True,False,0.0
-2026-11-17T01:00Z,Central Arkansas Bears @ Oklahoma State Cowboys,15.1,157.2,total,Under 160.5,-110.0,3.3,0.545,0.041,161.5 (-105),True,True,True,1.0
-2026-11-17T01:00Z,Abilene Christian Wildcats @ Missouri State Bears,6.4,143.4,spread,Missouri State Bears -7.5,-110.0,-1.1,0.49,-0.064,-5.5 (-110),True,False,False,0.0
-2026-11-17T01:00Z,Abilene Christian Wildcats @ Missouri State Bears,6.4,143.4,spread,Abilene Christian Wildcats +7.5,-110.0,1.1,0.51,-0.027,+5.5 (-110),False,False,False,0.0
-2026-11-17T01:00Z,Abilene Christian Wildcats @ Missouri State Bears,6.4,143.4,total,Over 145.5,-115.0,-2.1,0.468,-0.125,141.5 (-105),True,False,False,0.0
-2026-11-17T01:00Z,Abilene Christian Wildcats @ Missouri State Bears,6.4,143.4,total,Under 145.5,-105.0,2.1,0.532,0.038,141.5 (-115),False,False,True,1.0
-2026-11-17T00:00Z,The Citadel Bulldogs @ Clemson Tigers,18.4,139.1,spread,Clemson Tigers -24.5,-115.0,-6.1,0.447,-0.164,-24.5 (-108),True,True,False,0.0
-2026-11-17T00:00Z,The Citadel Bulldogs @ Clemson Tigers,18.4,139.1,spread,The Citadel Bulldogs +24.5,-105.0,6.1,0.553,0.079,+24.5 (-112),True,True,True,1.0
-2026-11-17T00:00Z,The Citadel Bulldogs @ Clemson Tigers,18.4,139.1,total,Over 145.5,-115.0,-6.4,0.412,-0.229,142.5 (-105),True,True,False,0.0
-2026-11-17T00:00Z,The Citadel Bulldogs @ Clemson Tigers,18.4,139.1,total,Under 145.5,-105.0,6.4,0.588,0.147,142.5 (-115),False,True,True,1.0
-2026-11-17T00:00Z,St. Thomas Tommies @ Long Island University Sharks,0.2,147.0,spread,Long Island University Sharks +2.5,-110.0,2.7,0.529,0.009,+1.5 (-125),False,False,True,0.26
-2026-11-17T00:00Z,St. Thomas Tommies @ Long Island University Sharks,0.2,147.0,spread,St. Thomas Tommies -2.5,-110.0,-2.7,0.471,-0.1,-1.5 (+105),True,False,False,0.0
-2026-11-17T00:00Z,St. Thomas Tommies @ Long Island University Sharks,0.2,147.0,total,Over 149.5,-105.0,-2.5,0.464,-0.095,146.5 (-115),True,False,False,0.0
-2026-11-17T00:00Z,St. Thomas Tommies @ Long Island University Sharks,0.2,147.0,total,Under 149.5,-115.0,2.5,0.536,0.003,146.5 (-105),False,False,True,0.08
-2026-11-17T03:00Z,Texas Southern Tigers @ UC San Diego Tritons,15.2,157.0,spread,UC San Diego Tritons -18.5,-110.0,-3.3,0.471,-0.101,-19.5 (-110),False,False,False,0.0
-2026-11-17T03:00Z,Texas Southern Tigers @ UC San Diego Tritons,15.2,157.0,spread,Texas Southern Tigers +18.5,-110.0,3.3,0.529,0.011,+19.5 (-110),True,False,True,0.29
-2026-11-17T03:00Z,Texas Southern Tigers @ UC San Diego Tritons,15.2,157.0,total,Over 156.5,-110.0,0.5,0.502,-0.041,156.5 (-110),True,False,False,0.0
-2026-11-17T03:00Z,Texas Southern Tigers @ UC San Diego Tritons,15.2,157.0,total,Under 156.5,-110.0,-0.5,0.498,-0.049,156.5 (-110),True,False,False,0.0
-2026-11-17T01:00Z,Columbia Lions @ Northwestern Wildcats,11.0,140.1,spread,Northwestern Wildcats -12.5,100.0,-1.5,0.487,-0.027,-11.5 (-120),True,False,False,0.0
-2026-11-17T01:00Z,Columbia Lions @ Northwestern Wildcats,11.0,140.1,spread,Columbia Lions +12.5,-120.0,1.5,0.513,-0.059,+11.5 (+100),False,False,False,0.0
-2026-11-17T01:00Z,Columbia Lions @ Northwestern Wildcats,11.0,140.1,total,Over 139.5,-112.0,0.6,0.505,-0.045,140.5 (-105),False,False,False,0.0
-2026-11-17T01:00Z,Columbia Lions @ Northwestern Wildcats,11.0,140.1,total,Under 139.5,-108.0,-0.6,0.495,-0.046,140.5 (-115),True,False,False,0.0
-2026-11-17T01:30Z,SE Louisiana Lions @ Texas A&M Aggies,28.1,156.2,spread,Texas A&M Aggies -33.5,-105.0,-5.4,0.457,-0.108,-34.5 (-112),False,True,False,0.0
-2026-11-17T01:30Z,SE Louisiana Lions @ Texas A&M Aggies,28.1,156.2,spread,SE Louisiana Lions +33.5,-115.0,5.4,0.543,0.016,+34.5 (-108),True,True,True,0.46
-2026-11-17T01:30Z,SE Louisiana Lions @ Texas A&M Aggies,28.1,156.2,total,Over 158.5,-110.0,-2.3,0.467,-0.108,160.5 (-112),False,True,False,0.0
-2026-11-17T01:30Z,SE Louisiana Lions @ Texas A&M Aggies,28.1,156.2,total,Under 158.5,-110.0,2.3,0.533,0.017,160.5 (-108),True,True,True,0.46
-2026-11-16T23:00Z,Iona Gaels @ UMBC Retrievers,-2.1,147.8,spread,UMBC Retrievers +2.5,-110.0,0.4,0.505,-0.036,+2.5 (-110),True,False,False,0.0
-2026-11-16T23:00Z,Iona Gaels @ UMBC Retrievers,-2.1,147.8,spread,Iona Gaels -2.5,-110.0,-0.4,0.495,-0.055,-2.5 (-110),True,False,False,0.0
-2026-11-16T23:00Z,Iona Gaels @ UMBC Retrievers,-2.1,147.8,total,Over 148.5,-105.0,-0.7,0.487,-0.049,143.5 (-112),True,False,False,0.0
-2026-11-16T23:00Z,Iona Gaels @ UMBC Retrievers,-2.1,147.8,total,Under 148.5,-115.0,0.7,0.513,-0.041,143.5 (-108),False,False,False,0.0
-2026-11-17T00:00Z,Grambling Tigers @ Kentucky Wildcats,23.7,150.9,spread,Kentucky Wildcats -30.5,-112.0,-6.8,0.444,-0.16,-28.5 (-112),True,True,False,0.0
-2026-11-17T00:00Z,Grambling Tigers @ Kentucky Wildcats,23.7,150.9,spread,Grambling Tigers +30.5,-108.0,6.8,0.556,0.071,+28.5 (-108),False,True,True,1.0
-2026-11-17T00:00Z,Grambling Tigers @ Kentucky Wildcats,23.7,150.9,total,Over 158.5,-105.0,-7.6,0.401,-0.216,152.5 (-115),True,True,False,0.0
-2026-11-17T00:00Z,Grambling Tigers @ Kentucky Wildcats,23.7,150.9,total,Under 158.5,-115.0,7.6,0.599,0.119,152.5 (-105),False,True,True,1.0
-2026-11-17T03:00Z,Long Beach State Beach @ UCLA Bruins,25.3,148.5,spread,UCLA Bruins -33.5,-115.0,-8.2,0.434,-0.189,-32.5 (-115),True,True,False,0.0
-2026-11-17T03:00Z,Long Beach State Beach @ UCLA Bruins,25.3,148.5,spread,Long Beach State Beach +33.5,-105.0,8.2,0.566,0.105,+32.5 (-105),False,True,True,1.0
-2026-11-17T03:00Z,Long Beach State Beach @ UCLA Bruins,25.3,148.5,total,Over 148.5,-108.0,-0.0,0.496,-0.045,145.5 (-108),True,True,False,0.0
-2026-11-17T03:00Z,Long Beach State Beach @ UCLA Bruins,25.3,148.5,total,Under 148.5,-112.0,0.0,0.504,-0.046,145.5 (-112),False,True,False,0.0
-2026-11-17T00:00Z,Western Kentucky Hilltoppers @ Tulsa Golden Hurricane,5.9,162.5,spread,Tulsa Golden Hurricane -5.5,-105.0,0.4,0.505,-0.013,-6.5 (-110),False,False,False,0.0
-2026-11-17T00:00Z,Western Kentucky Hilltoppers @ Tulsa Golden Hurricane,5.9,162.5,spread,Western Kentucky Hilltoppers +5.5,-115.0,-0.4,0.495,-0.075,+6.5 (-110),True,False,False,0.0
-2026-11-17T00:00Z,Western Kentucky Hilltoppers @ Tulsa Golden Hurricane,5.9,162.5,total,Over 159.5,-110.0,3.0,0.534,0.02,157.5 (-112),True,False,True,0.56
-2026-11-17T00:00Z,Western Kentucky Hilltoppers @ Tulsa Golden Hurricane,5.9,162.5,total,Under 159.5,-110.0,-3.0,0.466,-0.111,157.5 (-108),False,False,False,0.0
-2026-11-17T00:30Z,Tarleton State Texans @ Drake Bulldogs,7.3,141.5,spread,Drake Bulldogs -10.5,-112.0,-3.2,0.469,-0.112,-8.5 (-118),True,False,False,0.0
-2026-11-17T00:30Z,Tarleton State Texans @ Drake Bulldogs,7.3,141.5,spread,Tarleton State Texans +10.5,-108.0,3.2,0.531,0.023,+8.5 (-102),False,False,True,0.61
-2026-11-17T00:30Z,Tarleton State Texans @ Drake Bulldogs,7.3,141.5,total,Over 145.5,-112.0,-4.0,0.443,-0.161,146.5 (-110),False,False,False,0.0
-2026-11-17T00:30Z,Tarleton State Texans @ Drake Bulldogs,7.3,141.5,total,Under 145.5,-108.0,4.0,0.557,0.073,146.5 (-110),True,False,True,1.0
-2026-11-17T00:00Z,Eastern Kentucky Colonels @ Kent State Golden Flashes,9.1,156.8,spread,Kent State Golden Flashes -11.5,-105.0,-2.4,0.477,-0.068,-10.5 (-110),True,False,False,0.0
-2026-11-17T00:00Z,Eastern Kentucky Colonels @ Kent State Golden Flashes,9.1,156.8,spread,Eastern Kentucky Colonels +11.5,-115.0,2.4,0.523,-0.023,+10.5 (-110),False,False,True,0.0
-2026-11-17T00:00Z,Eastern Kentucky Colonels @ Kent State Golden Flashes,9.1,156.8,total,Over 157.5,-115.0,-0.7,0.487,-0.089,161.5 (-105),False,False,False,0.0
-2026-11-17T00:00Z,Eastern Kentucky Colonels @ Kent State Golden Flashes,9.1,156.8,total,Under 157.5,-105.0,0.7,0.513,0.001,161.5 (-115),True,False,False,0.03
-2026-11-17T02:30Z,East Texas A&M Lions @ Oregon State Beavers,11.5,150.5,spread,Oregon State Beavers -17.5,-115.0,-6.0,0.445,-0.169,-15.5 (-112),True,False,False,0.0
-2026-11-17T02:30Z,East Texas A&M Lions @ Oregon State Beavers,11.5,150.5,spread,East Texas A&M Lions +17.5,-105.0,6.0,0.555,0.084,+15.5 (-108),False,False,True,1.0
-2026-11-17T02:30Z,East Texas A&M Lions @ Oregon State Beavers,11.5,150.5,total,Over 151.5,-115.0,-1.0,0.484,-0.096,154.5 (-108),False,False,False,0.0
-2026-11-17T02:30Z,East Texas A&M Lions @ Oregon State Beavers,11.5,150.5,total,Under 151.5,-105.0,1.0,0.516,0.008,154.5 (-112),True,False,False,0.22
-2026-11-16T19:00Z,Florida A&M Rattlers @ UTEP Miners,13.4,142.3,spread,UTEP Miners -19.5,-110.0,-6.1,0.445,-0.151,-20.5 (-108),False,False,False,0.0
-2026-11-16T19:00Z,Florida A&M Rattlers @ UTEP Miners,13.4,142.3,spread,Florida A&M Rattlers +19.5,-110.0,6.1,0.555,0.06,+20.5 (-112),True,False,True,1.0
-2026-11-16T19:00Z,Florida A&M Rattlers @ UTEP Miners,13.4,142.3,total,Over 140.5,-115.0,1.8,0.521,-0.027,142.5 (-108),False,False,False,0.0
-2026-11-16T19:00Z,Florida A&M Rattlers @ UTEP Miners,13.4,142.3,total,Under 140.5,-105.0,-1.8,0.479,-0.064,142.5 (-112),True,False,False,0.0
+2026-11-17T00:00Z,Jacksonville Dolphins @ Georgia Bulldogs,22.7,151.1,spread,Georgia Bulldogs -23.5,-105.0,-0.8,0.488,-0.047,-22.5 (-102),True,True,False,0.0
+2026-11-17T00:00Z,Jacksonville Dolphins @ Georgia Bulldogs,22.7,151.1,spread,Jacksonville Dolphins +23.5,-115.0,0.8,0.512,-0.043,+22.5 (-118),False,True,False,0.0
+2026-11-17T00:00Z,Jacksonville Dolphins @ Georgia Bulldogs,22.7,151.1,total,Over 153.5,-115.0,-2.4,0.459,-0.141,153.5 (-108),True,True,False,0.0
+2026-11-17T00:00Z,Jacksonville Dolphins @ Georgia Bulldogs,22.7,151.1,total,Under 153.5,-105.0,2.4,0.541,0.056,153.5 (-112),True,True,True,1.0
+2026-11-17T01:00Z,Montana Grizzlies @ Kansas State Wildcats,14.3,155.4,spread,Kansas State Wildcats -15.5,-105.0,-1.2,0.481,-0.061,-14.5 (-110),True,False,False,0.0
+2026-11-17T01:00Z,Montana Grizzlies @ Kansas State Wildcats,14.3,155.4,spread,Montana Grizzlies +15.5,-115.0,1.2,0.519,-0.03,+14.5 (-110),False,False,False,0.0
+2026-11-17T01:00Z,Montana Grizzlies @ Kansas State Wildcats,14.3,155.4,total,Over 155.5,-115.0,-0.1,0.495,-0.075,154.5 (-105),True,False,False,0.0
+2026-11-17T01:00Z,Montana Grizzlies @ Kansas State Wildcats,14.3,155.4,total,Under 155.5,-105.0,0.1,0.505,-0.013,154.5 (-115),False,False,False,0.0
+2026-11-17T00:00Z,Richmond Spiders @ Virginia Tech Hokies,13.8,154.7,spread,Virginia Tech Hokies -13.5,-118.0,0.3,0.504,-0.068,-12.5 (-115),True,False,False,0.0
+2026-11-17T00:00Z,Richmond Spiders @ Virginia Tech Hokies,13.8,154.7,spread,Richmond Spiders +13.5,-102.0,-0.3,0.496,-0.018,+12.5 (-105),False,False,False,0.0
+2026-11-17T00:00Z,Richmond Spiders @ Virginia Tech Hokies,13.8,154.7,total,Over 155.5,-105.0,-0.8,0.483,-0.057,152.5 (-110),True,False,False,0.0
+2026-11-17T00:00Z,Richmond Spiders @ Virginia Tech Hokies,13.8,154.7,total,Under 155.5,-115.0,0.8,0.517,-0.033,152.5 (-110),False,False,False,0.0
+2026-11-16T23:00Z,Alcorn State Braves @ Maryland Terrapins,33.2,155.7,spread,Maryland Terrapins -34.5,-108.0,-1.3,0.483,-0.071,-34.5 (-105),True,True,False,0.0
+2026-11-16T23:00Z,Alcorn State Braves @ Maryland Terrapins,33.2,155.7,spread,Alcorn State Braves +34.5,-112.0,1.3,0.517,-0.02,+34.5 (-115),True,True,False,0.0
+2026-11-16T23:00Z,Alcorn State Braves @ Maryland Terrapins,33.2,155.7,total,Over 152.5,-115.0,3.2,0.544,0.017,153.5 (-115),False,True,True,0.49
+2026-11-16T23:00Z,Alcorn State Braves @ Maryland Terrapins,33.2,155.7,total,Under 152.5,-105.0,-3.2,0.456,-0.11,153.5 (-105),True,True,False,0.0
+2026-11-17T01:00Z,Western Illinois Leathernecks @ Minnesota Golden Gophers,36.2,141.2,spread,Minnesota Golden Gophers -36.5,-108.0,-0.3,0.496,-0.044,-33.5 (-112),True,True,False,0.0
+2026-11-17T01:00Z,Western Illinois Leathernecks @ Minnesota Golden Gophers,36.2,141.2,spread,Western Illinois Leathernecks +36.5,-112.0,0.3,0.504,-0.047,+33.5 (-108),False,True,False,0.0
+2026-11-17T01:00Z,Western Illinois Leathernecks @ Minnesota Golden Gophers,36.2,141.2,total,Over 138.5,-118.0,2.7,0.539,-0.005,136.5 (-105),True,True,True,0.0
+2026-11-17T01:00Z,Western Illinois Leathernecks @ Minnesota Golden Gophers,36.2,141.2,total,Under 138.5,-102.0,-2.7,0.461,-0.086,136.5 (-115),False,True,False,0.0
+2026-11-16T23:30Z,Prairie View A&M Panthers @ Ohio State Buckeyes,29.8,153.2,spread,Ohio State Buckeyes -34.5,-112.0,-4.7,0.441,-0.165,-32.5 (-115),True,True,False,0.0
+2026-11-16T23:30Z,Prairie View A&M Panthers @ Ohio State Buckeyes,29.8,153.2,spread,Prairie View A&M Panthers +34.5,-108.0,4.7,0.559,0.076,+32.5 (-105),False,True,True,1.0
+2026-11-16T23:30Z,Prairie View A&M Panthers @ Ohio State Buckeyes,29.8,153.2,total,Over 153.5,-115.0,-0.3,0.491,-0.082,154.5 (-115),False,True,False,0.0
+2026-11-16T23:30Z,Prairie View A&M Panthers @ Ohio State Buckeyes,29.8,153.2,total,Under 153.5,-105.0,0.3,0.509,-0.007,154.5 (-105),True,True,False,0.0
+2026-11-17T03:00Z,Portland State Vikings @ Saint Mary's Gaels,14.3,150.3,spread,Saint Mary's Gaels -17.5,-118.0,-3.2,0.452,-0.164,-18.5 (-110),False,False,False,0.0
+2026-11-17T03:00Z,Portland State Vikings @ Saint Mary's Gaels,14.3,150.3,spread,Portland State Vikings +17.5,-102.0,3.2,0.548,0.084,+18.5 (-110),True,False,True,1.0
+2026-11-17T03:00Z,Portland State Vikings @ Saint Mary's Gaels,14.3,150.3,total,Over 150.5,-110.0,-0.2,0.492,-0.061,150.5 (-110),True,False,False,0.0
+2026-11-17T03:00Z,Portland State Vikings @ Saint Mary's Gaels,14.3,150.3,total,Under 150.5,-110.0,0.2,0.508,-0.03,150.5 (-110),True,False,False,0.0
+2026-11-17T01:00Z,Central Arkansas Bears @ Oklahoma State Cowboys,18.1,160.4,spread,Oklahoma State Cowboys -21.5,-108.0,-3.4,0.451,-0.131,-18.5 (-112),True,True,False,0.0
+2026-11-17T01:00Z,Central Arkansas Bears @ Oklahoma State Cowboys,18.1,160.4,spread,Central Arkansas Bears +21.5,-112.0,3.4,0.549,0.039,+18.5 (-108),False,True,True,1.0
+2026-11-17T01:00Z,Central Arkansas Bears @ Oklahoma State Cowboys,18.1,160.4,total,Over 160.5,-110.0,-0.1,0.494,-0.056,162.5 (-105),False,True,False,0.0
+2026-11-17T01:00Z,Central Arkansas Bears @ Oklahoma State Cowboys,18.1,160.4,total,Under 160.5,-110.0,0.1,0.506,-0.035,162.5 (-115),True,True,False,0.0
+2026-11-17T01:00Z,Abilene Christian Wildcats @ Missouri State Bears,8.6,145.4,spread,Missouri State Bears -7.5,-110.0,1.1,0.516,-0.015,-5.5 (-110),True,False,False,0.0
+2026-11-17T01:00Z,Abilene Christian Wildcats @ Missouri State Bears,8.6,145.4,spread,Abilene Christian Wildcats +7.5,-110.0,-1.1,0.484,-0.075,+5.5 (-110),False,False,False,0.0
+2026-11-17T01:00Z,Abilene Christian Wildcats @ Missouri State Bears,8.6,145.4,total,Over 145.5,-115.0,-0.1,0.493,-0.078,141.5 (-105),True,False,False,0.0
+2026-11-17T01:00Z,Abilene Christian Wildcats @ Missouri State Bears,8.6,145.4,total,Under 145.5,-105.0,0.1,0.507,-0.01,141.5 (-115),False,False,False,0.0
+2026-11-17T00:00Z,The Citadel Bulldogs @ Clemson Tigers,18.4,139.7,spread,Clemson Tigers -24.5,-115.0,-6.1,0.417,-0.221,-24.5 (-108),True,True,False,0.0
+2026-11-17T00:00Z,The Citadel Bulldogs @ Clemson Tigers,18.4,139.7,spread,The Citadel Bulldogs +24.5,-105.0,6.1,0.583,0.139,+24.5 (-112),True,True,True,1.0
+2026-11-17T00:00Z,The Citadel Bulldogs @ Clemson Tigers,18.4,139.7,total,Over 145.5,-115.0,-5.8,0.406,-0.241,142.5 (-105),True,True,False,0.0
+2026-11-17T00:00Z,The Citadel Bulldogs @ Clemson Tigers,18.4,139.7,total,Under 145.5,-105.0,5.8,0.594,0.16,142.5 (-115),False,True,True,1.0
+2026-11-17T00:00Z,St. Thomas Tommies @ Long Island University Sharks,-0.7,146.5,spread,Long Island University Sharks +2.5,-110.0,1.8,0.528,0.007,+1.5 (-105),False,False,True,0.2
+2026-11-17T00:00Z,St. Thomas Tommies @ Long Island University Sharks,-0.7,146.5,spread,St. Thomas Tommies -2.5,-110.0,-1.8,0.472,-0.098,-1.5 (-115),True,False,False,0.0
+2026-11-17T00:00Z,St. Thomas Tommies @ Long Island University Sharks,-0.7,146.5,total,Over 149.5,-105.0,-3.0,0.45,-0.121,146.5 (-115),True,False,False,0.0
+2026-11-17T00:00Z,St. Thomas Tommies @ Long Island University Sharks,-0.7,146.5,total,Under 149.5,-115.0,3.0,0.55,0.028,146.5 (-105),False,False,True,0.8
+2026-11-17T03:00Z,Texas Southern Tigers @ UC San Diego Tritons,17.7,160.2,spread,UC San Diego Tritons -18.5,-110.0,-0.8,0.488,-0.069,-18.5 (-112),True,False,False,0.0
+2026-11-17T03:00Z,Texas Southern Tigers @ UC San Diego Tritons,17.7,160.2,spread,Texas Southern Tigers +18.5,-110.0,0.8,0.512,-0.022,+18.5 (-108),True,False,False,0.0
+2026-11-17T03:00Z,Texas Southern Tigers @ UC San Diego Tritons,17.7,160.2,total,Over 156.5,-110.0,3.7,0.551,0.052,156.5 (-115),True,False,True,1.0
+2026-11-17T03:00Z,Texas Southern Tigers @ UC San Diego Tritons,17.7,160.2,total,Under 156.5,-110.0,-3.7,0.449,-0.143,156.5 (-105),True,False,False,0.0
+2026-11-17T01:00Z,Columbia Lions @ Northwestern Wildcats,10.9,140.8,spread,Northwestern Wildcats -12.5,100.0,-1.6,0.475,-0.05,-11.5 (-120),True,False,False,0.0
+2026-11-17T01:00Z,Columbia Lions @ Northwestern Wildcats,10.9,140.8,spread,Columbia Lions +12.5,-120.0,1.6,0.525,-0.037,+11.5 (+100),False,False,True,0.0
+2026-11-17T01:00Z,Columbia Lions @ Northwestern Wildcats,10.9,140.8,total,Over 139.5,-112.0,1.3,0.517,-0.022,140.5 (-105),False,False,False,0.0
+2026-11-17T01:00Z,Columbia Lions @ Northwestern Wildcats,10.9,140.8,total,Under 139.5,-108.0,-1.3,0.483,-0.069,140.5 (-115),True,False,False,0.0
+2026-11-17T01:30Z,SE Louisiana Lions @ Texas A&M Aggies,31.3,157.6,spread,Texas A&M Aggies -33.5,-105.0,-2.2,0.472,-0.079,-33.5 (-105),True,True,False,0.0
+2026-11-17T01:30Z,SE Louisiana Lions @ Texas A&M Aggies,31.3,157.6,spread,SE Louisiana Lions +33.5,-115.0,2.2,0.528,-0.012,+33.5 (-115),True,True,True,0.0
+2026-11-17T01:30Z,SE Louisiana Lions @ Texas A&M Aggies,31.3,157.6,total,Over 158.5,-110.0,-0.9,0.482,-0.08,160.5 (-112),False,True,False,0.0
+2026-11-17T01:30Z,SE Louisiana Lions @ Texas A&M Aggies,31.3,157.6,total,Under 158.5,-110.0,0.9,0.518,-0.011,160.5 (-108),True,True,False,0.0
+2026-11-16T23:00Z,Iona Gaels @ UMBC Retrievers,-1.6,148.1,spread,UMBC Retrievers +2.5,-110.0,0.9,0.513,-0.021,+2.5 (-110),True,False,False,0.0
+2026-11-16T23:00Z,Iona Gaels @ UMBC Retrievers,-1.6,148.1,spread,Iona Gaels -2.5,-110.0,-0.9,0.487,-0.07,-2.5 (-110),True,False,False,0.0
+2026-11-16T23:00Z,Iona Gaels @ UMBC Retrievers,-1.6,148.1,total,Over 148.5,-105.0,-0.4,0.489,-0.044,143.5 (-112),True,False,False,0.0
+2026-11-16T23:00Z,Iona Gaels @ UMBC Retrievers,-1.6,148.1,total,Under 148.5,-115.0,0.4,0.511,-0.046,143.5 (-108),False,False,False,0.0
+2026-11-17T00:00Z,Grambling Tigers @ Kentucky Wildcats,27.7,154.7,spread,Kentucky Wildcats -30.5,-112.0,-2.8,0.463,-0.124,-28.5 (-105),True,True,False,0.0
+2026-11-17T00:00Z,Grambling Tigers @ Kentucky Wildcats,27.7,154.7,spread,Grambling Tigers +30.5,-108.0,2.8,0.537,0.034,+28.5 (-115),False,True,True,0.93
+2026-11-17T00:00Z,Grambling Tigers @ Kentucky Wildcats,27.7,154.7,total,Over 158.5,-105.0,-3.8,0.439,-0.143,152.5 (-110),True,True,False,0.0
+2026-11-17T00:00Z,Grambling Tigers @ Kentucky Wildcats,27.7,154.7,total,Under 158.5,-115.0,3.8,0.561,0.049,152.5 (-110),False,True,True,1.0
+2026-11-17T03:00Z,Long Beach State Beach @ UCLA Bruins,30.1,147.3,spread,UCLA Bruins -33.5,-115.0,-3.4,0.456,-0.147,-30.5 (-112),True,True,False,0.0
+2026-11-17T03:00Z,Long Beach State Beach @ UCLA Bruins,30.1,147.3,spread,Long Beach State Beach +33.5,-105.0,3.4,0.544,0.062,+30.5 (-108),False,True,True,1.0
+2026-11-17T03:00Z,Long Beach State Beach @ UCLA Bruins,30.1,147.3,total,Over 148.5,-108.0,-1.2,0.477,-0.082,145.5 (-108),True,True,False,0.0
+2026-11-17T03:00Z,Long Beach State Beach @ UCLA Bruins,30.1,147.3,total,Under 148.5,-112.0,1.2,0.523,-0.01,145.5 (-112),False,True,False,0.0
+2026-11-17T00:00Z,Western Kentucky Hilltoppers @ Tulsa Golden Hurricane,5.0,165.0,spread,Tulsa Golden Hurricane -5.5,-105.0,-0.5,0.492,-0.04,-5.5 (-115),True,False,False,0.0
+2026-11-17T00:00Z,Western Kentucky Hilltoppers @ Tulsa Golden Hurricane,5.0,165.0,spread,Western Kentucky Hilltoppers +5.5,-115.0,0.5,0.508,-0.05,+5.5 (-105),True,False,False,0.0
+2026-11-17T00:00Z,Western Kentucky Hilltoppers @ Tulsa Golden Hurricane,5.0,165.0,total,Over 159.5,-110.0,5.5,0.576,0.099,158.5 (-108),True,False,True,1.0
+2026-11-17T00:00Z,Western Kentucky Hilltoppers @ Tulsa Golden Hurricane,5.0,165.0,total,Under 159.5,-110.0,-5.5,0.424,-0.19,158.5 (-112),False,False,False,0.0
+2026-11-17T00:30Z,Tarleton State Texans @ Drake Bulldogs,8.0,143.0,spread,Drake Bulldogs -10.5,-112.0,-2.5,0.461,-0.127,-9.5 (-115),True,False,False,0.0
+2026-11-17T00:30Z,Tarleton State Texans @ Drake Bulldogs,8.0,143.0,spread,Tarleton State Texans +10.5,-108.0,2.5,0.539,0.037,+9.5 (-105),False,False,True,1.0
+2026-11-17T00:30Z,Tarleton State Texans @ Drake Bulldogs,8.0,143.0,total,Over 145.5,-112.0,-2.5,0.456,-0.136,146.5 (-108),False,False,False,0.0
+2026-11-17T00:30Z,Tarleton State Texans @ Drake Bulldogs,8.0,143.0,total,Under 145.5,-108.0,2.5,0.544,0.047,146.5 (-112),True,False,True,1.0
+2026-11-17T00:00Z,Eastern Kentucky Colonels @ Kent State Golden Flashes,8.7,162.0,spread,Kent State Golden Flashes -11.5,-105.0,-2.8,0.456,-0.11,-9.5 (-115),True,False,False,0.0
+2026-11-17T00:00Z,Eastern Kentucky Colonels @ Kent State Golden Flashes,8.7,162.0,spread,Eastern Kentucky Colonels +11.5,-115.0,2.8,0.544,0.018,+9.5 (-105),False,False,True,0.51
+2026-11-17T00:00Z,Eastern Kentucky Colonels @ Kent State Golden Flashes,8.7,162.0,total,Over 157.5,-115.0,4.5,0.561,0.05,160.5 (-110),False,False,True,1.0
+2026-11-17T00:00Z,Eastern Kentucky Colonels @ Kent State Golden Flashes,8.7,162.0,total,Under 157.5,-105.0,-4.5,0.439,-0.144,160.5 (-110),True,False,False,0.0
+2026-11-17T02:30Z,East Texas A&M Lions @ Oregon State Beavers,15.7,153.8,spread,Oregon State Beavers -17.5,-115.0,-1.8,0.473,-0.115,-16.5 (-105),True,False,False,0.0
+2026-11-17T02:30Z,East Texas A&M Lions @ Oregon State Beavers,15.7,153.8,spread,East Texas A&M Lions +17.5,-105.0,1.8,0.527,0.028,+16.5 (-115),False,False,True,0.74
+2026-11-17T02:30Z,East Texas A&M Lions @ Oregon State Beavers,15.7,153.8,total,Over 151.5,-115.0,2.3,0.531,-0.007,153.5 (-115),False,False,True,0.0
+2026-11-17T02:30Z,East Texas A&M Lions @ Oregon State Beavers,15.7,153.8,total,Under 151.5,-105.0,-2.3,0.469,-0.084,153.5 (-105),True,False,False,0.0

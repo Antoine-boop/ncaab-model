@@ -83,8 +83,15 @@ def player_season_values(pb: pd.DataFrame, team_final: dict, k_off=1.0, k_def=1.
     return agg
 
 
+# P(regular plays next game | consecutive team games missed), measured on 2016-22 box scores.
+# Using it (p_return=P_RETURN) did not improve validation results (experiments/LOG.md E05); default is the
+# simpler "missed the last game -> out" rule.
+P_RETURN = (0.98, 0.48, 0.35, 0.23, 0.19, 0.13, 0.05)
+
+
 def team_features(pb: pd.DataFrame, games: pd.DataFrame, pvals: pd.DataFrame, tau=45.0,
-                  k_avail_off=1.0, k_avail_def=1.0, upcoming: pd.DataFrame | None = None) -> pd.DataFrame:
+                  k_avail_off=1.0, k_avail_def=1.0, upcoming: pd.DataFrame | None = None,
+                  p_return=None) -> pd.DataFrame:
     """
     Walk-forward per (game_id, team_id) pre-game features. pvals = player_season_values(...) for all seasons.
     upcoming: optional unplayed games (game_id, season, date, home_id, away_id); features come from each
@@ -113,7 +120,7 @@ def team_features(pb: pd.DataFrame, games: pd.DataFrame, pvals: pd.DataFrame, ta
         grp = groups.get(key)
         st = dict(cum_min=defaultdict(float), cum_off=defaultdict(float), cum_def=defaultdict(float),
                   dec_share=defaultdict(float), dec_h_share=defaultdict(float), dec_h_cnt=defaultdict(float),
-                  dec_g=0.0, last_date=None, last_players=set(), n_games=0)
+                  dec_g=0.0, last_date=None, last_players=set(), n_games=0, streak=defaultdict(int))
 
         def advance(D):
             if st["last_date"] is not None:
@@ -151,7 +158,10 @@ def team_features(pb: pd.DataFrame, games: pd.DataFrame, pvals: pd.DataFrame, ta
             for p in dec_share:
                 avg_sh[p] = dec_share[p] / dec_g if dec_g > 0 else 0.0
                 healthy = st["dec_h_share"][p] / st["dec_h_cnt"][p] if st["dec_h_cnt"][p] > 1e-9 else 0.0
-                exp_sh[p] = healthy if p in st["last_players"] else 0.0
+                if p_return is None:
+                    exp_sh[p] = healthy if p in st["last_players"] else 0.0
+                else:
+                    exp_sh[p] = healthy * p_return[min(st["streak"][p], len(p_return) - 1)]
             z = sum(exp_sh.values())
             if z > 0:
                 a_off = a_def = 0.0
@@ -179,6 +189,8 @@ def team_features(pb: pd.DataFrame, games: pd.DataFrame, pvals: pd.DataFrame, ta
                 played = sub[sub.minutes > 0]
                 st["dec_g"] += 1.0
                 st["last_players"] = set(played.athlete_id)
+                for p in list(st["dec_share"].keys()):
+                    st["streak"][p] = 0 if p in st["last_players"] else st["streak"][p] + 1
                 for p, mi, sh, go, gdf in zip(played.athlete_id, played.minutes, played.share, played.gs_off,
                                               played.gs_def):
                     st["cum_min"][p] += mi

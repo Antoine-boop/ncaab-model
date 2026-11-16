@@ -66,6 +66,7 @@ def fetch_slate(d: dt.date) -> pd.DataFrame:
 
 MISMATCH = 20.0                                # buy games: model under-projects big favourites
 MIN_EDGE = {"spread": 1.5, "total": 2.0}       # model must disagree with the number, not just the price
+NOV_SPREAD_MIN_EV = 0.06                       # November spreads: weakest month in the backtest (+2.5% at EV>=3%)
 
 
 def kelly_fraction(p, dec, frac=0.25, cap=0.01):
@@ -103,14 +104,16 @@ def main():
     print(f"{len(slate)} D1-vs-D1 games on {today}", flush=True)
 
     up = slate[["game_id", "season", "date", "season_type", "neutral", "conf_game", "home_id", "away_id",
-                "home_name", "away_name", "n_periods"]].copy()
+                "home_name", "away_name", "n_periods", "home_conf", "away_conf", "venue_city", "venue_state"]].copy()
     up["n_periods"] = 2
     cache = os.path.join(PROC, f"upcoming_{today}.parquet")
     s2 = pd.read_pickle(os.path.join(PROC, "stage2.pkl"))
     if args.no_refresh and os.path.exists(cache):
         U = pd.read_parquet(cache)
     else:
-        G, aux = MD.run_pipeline(games, upcoming=up, verbose=False)
+        games_all = pd.read_parquet(os.path.join(PROC, "games_all.parquet"))
+        games_all = games_all[games_all.date < pd.Timestamp(today)]
+        G, aux = MD.run_pipeline(games, upcoming=up, verbose=False, games_all=games_all)
         G = MD.apply_stage2(G, s2)
         U = G[G.game_id.isin(up.game_id)].copy()
         U.to_parquet(cache, index=False)
@@ -169,7 +172,8 @@ def main():
     os.makedirs(REPORTS, exist_ok=True)
     out = os.path.join(REPORTS, f"picks_{today}.csv")
     picks.to_csv(out, index=False)
-    q = picks[(picks.ev >= args.min_ev) & picks.min_edge]
+    min_ev = np.where((picks.market == "spread") & (today.month == 11), max(args.min_ev, NOV_SPREAD_MIN_EV), args.min_ev)
+    q = picks[(picks.ev >= min_ev) & picks.min_edge]
     bets = q[~q.mismatch | args.allow_mismatch].sort_values("ev", ascending=False)
     skipped = q[q.mismatch & ~args.allow_mismatch]
     pd.set_option("display.width", 250)

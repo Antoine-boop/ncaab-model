@@ -22,6 +22,7 @@ import statsmodels.api as sm
 from scipy.stats import norm
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import features as FE  # noqa: E402
 import players as PL  # noqa: E402
 import priors as PR  # noqa: E402
 from build_dataset import team_game_rows  # noqa: E402
@@ -32,7 +33,9 @@ PROC = os.path.join(ROOT, "data", "processed")
 DEV = list(range(2016, 2023))          # stage-2 + calibration fit seasons
 BURN = 2015
 
-PER_GAME_W = {"ppp": 70, "tempo": 1, "tov": 70, "orb": 30, "ftr": 58, "ftp": 20, "r3": 58, "p3": 22, "p2": 35}
+PER_GAME_W = {"ppp": 70, "tempo": 1, "tov": 70, "orb": 30, "ftr": 58, "ftp": 20, "r3": 58, "p3": 22, "p2": 35,
+              "mkt": 1}
+BOX_COMPONENTS = ("tempo", "tov", "orb", "ftr", "ftp", "r3", "p3", "p2")
 
 # Defaults; overwritten by reports/best_params.json when present (written from tuning results)
 DEFAULT_PARAMS = {
@@ -76,7 +79,8 @@ def upcoming_rows(up: pd.DataFrame) -> pd.DataFrame:
     return tg
 
 
-def run_pipeline(games: pd.DataFrame, upcoming: pd.DataFrame | None = None, params=None, verbose=True):
+def run_pipeline(games: pd.DataFrame, upcoming: pd.DataFrame | None = None, params=None, verbose=True,
+                 games_all: pd.DataFrame | None = None):
     params = params or load_params()
     seasons = sorted(games.season.unique())
     allg = games if upcoming is None or upcoming.empty else pd.concat([games, upcoming], ignore_index=True)
@@ -112,13 +116,17 @@ def run_pipeline(games: pd.DataFrame, upcoming: pd.DataFrame | None = None, para
     preds["ppp"], fin_ppp = run_component(tg, "ppp", pp, seasons=seas, burn_in_season=burn, prior_fn=prior_fn,
                                           return_state=False)
     finals = {"ppp": fin_ppp}
-    for comp in COMPONENTS:
-        if comp == "ppp":
-            continue
+    for comp in BOX_COMPONENTS:
         preds[comp], finals[comp] = run_component(tg, comp, comp_params(comp, params[comp]), seasons=seas,
                                                   burn_in_season=burn)
         if verbose:
             print("component", comp, "done", flush=True)
+    # market-derived ratings from previous games' closing lines (E01)
+    tg["mkt_pts"] = FE.market_points(allg)
+    mp = FE.MKT_PARAMS
+    preds["mkt"], _ = run_component(tg, "mkt", CompParams(lam_off=mp["lam"], lam_def=mp["lam"], tau=mp["tau"],
+                                                         rho_off=mp["rho"], rho_def=mp["rho"], lam_h=30),
+                                    seasons=seas, burn_in_season=burn)
 
     # ---- assemble game-level features ----
     G = allg.copy()
@@ -150,6 +158,13 @@ def run_pipeline(games: pd.DataFrame, upcoming: pd.DataFrame | None = None, para
     G["min_games"] = np.minimum(G.h_n_games.fillna(0), G.a_n_games.fillna(0))
     G["early"] = np.exp(-G.min_games / 6.0)       # ~1 for first games, decays with games played
     G["loc_h"] = np.where(G.neutral, 0, 1)
+    G["mkt_margin"] = preds["mkt"][:n] - preds["mkt"][n:]
+    G["mkt_total"] = preds["mkt"][:n] + preds["mkt"][n:]
+    if games_all is None:
+        games_all = pd.read_parquet(os.path.join(PROC, "games_all.parquet"))
+    G = FE.add_engineered(G, games_all)
+    if verbose:
+        print("engineered features done", flush=True)
     return G, dict(tf=tf, pv=pv, finals=finals, prior_models=pm)
 
 
@@ -157,10 +172,13 @@ def run_pipeline(games: pd.DataFrame, upcoming: pd.DataFrame | None = None, para
 # stage 2
 # --------------------------------------------------------------------------------------------
 MARGIN_X = ["eff_margin", "comp_margin", "avail_net", "early_eff_margin", "early_comp_margin",
-            "m_tov", "m_orb", "m_ftr", "m_ftp", "m_r3", "m_p3", "m_p2"]
+            "m_tov", "m_orb", "m_ftr", "m_ftp", "m_r3", "m_p3", "m_p2",
+            "mkt_margin", "rest_diff", "b2b_diff", "g7_diff", "trav_diff", "tz_a", "elev_home",
+            "hca_team", "conf_m", "form_m"]
 TOTAL_X = ["eff_total", "comp_total", "avail_tot", "early_eff_total", "early_comp_total",
            "ot_exp", "neutral_f", "post", "conf_f", "tempo_hat",
-           "t_tov", "t_orb", "t_ftr", "t_ftp", "t_r3", "t_p3", "t_p2"]
+           "t_tov", "t_orb", "t_ftr", "t_ftp", "t_r3", "t_p3", "t_p2",
+           "mkt_total", "rest_sum", "b2b_any", "elev", "trav_a", "arena_tot", "conf_t", "form_t"]
 
 
 def _design(G, cols):
@@ -180,16 +198,19 @@ def _design(G, cols):
     return sm.add_constant(X[cols], has_constant="add")
 
 
+def _fit_rows(G):
+    return G.margin.notna() & G.eff_margin.notna() & G.comp_margin.notna() & (G.season >= 2016)
+
+
 def fit_stage2(G, fit_seasons=DEV):
-    tr = G[G.season.isin(fit_seasons) & G.margin.notna() & G.eff_margin.notna() & G.comp_margin.notna()]
-    mm = sm.OLS(tr.margin, _design(tr, MARGIN_X)).fit()
-    # totals: residual excludes OT inflation by modelling regulation-equivalent expectation + OT term
-    mt = sm.OLS(tr.total_pts, _design(tr, TOTAL_X)).fit()
+    tr = G[G.season.isin(fit_seasons) & _fit_rows(G)]
+    mm = sm.OLS(tr.margin, _design(tr, MARGIN_X), missing="drop").fit()
+    mt = sm.OLS(tr.total_pts, _design(tr, TOTAL_X), missing="drop").fit()
     resid = tr.margin - mm.predict(_design(tr, MARGIN_X))
-    sig_m = float(np.sqrt(np.mean(resid ** 2)))
+    sig_m = float(np.sqrt(np.nanmean(resid ** 2)))
     rt = tr.total_pts - mt.predict(_design(tr, TOTAL_X))
-    sig_t = float(np.sqrt(np.mean(rt ** 2)))
-    return dict(margin=mm, total=mt, sig_m=sig_m, sig_t=sig_t)
+    sig_t = float(np.sqrt(np.nanmean(rt ** 2)))
+    return dict(margin=mm, total=mt, sig_m=sig_m, sig_t=sig_t, fit_seasons=list(fit_seasons))
 
 
 def apply_stage2(G, s2):
@@ -200,17 +221,43 @@ def apply_stage2(G, s2):
     return G
 
 
+def stage2_oos(G):
+    """
+    Out-of-sample stage-2 predictions for backtesting: leave-one-season-out inside 2016-22,
+    expanding window (all earlier seasons from 2016) for 2023+. No season is predicted by a fit that saw it.
+    """
+    G = G.copy()
+    G["pred_margin"], G["pred_total"] = np.nan, np.nan
+    for s in sorted(G.season.unique()):
+        if s < 2016:
+            continue
+        fit = [x for x in DEV if x != s] if s <= 2022 else list(range(2016, s))
+        s2 = fit_stage2(G, fit)
+        m = G.season == s
+        P = apply_stage2(G[m], s2)
+        G.loc[m, "pred_margin"], G.loc[m, "pred_total"] = P.pred_margin.to_numpy(), P.pred_total.to_numpy()
+    sig = float(np.sqrt(np.nanmean((G.margin - G.pred_margin) ** 2)))
+    G["p_home"] = norm.cdf(G.pred_margin / sig)
+    return G
+
+
 def main():
     games = pd.read_parquet(os.path.join(PROC, "games.parquet"))
     G, aux = run_pipeline(games)
-    s2 = fit_stage2(G)
-    print(s2["margin"].params.round(4).to_dict())
-    print(s2["total"].params.round(4).to_dict())
+    G.to_parquet(os.path.join(PROC, "features.parquet"), index=False)
+    # backtest predictions (out-of-sample stage 2)
+    P = stage2_oos(G)
+    P.to_parquet(os.path.join(PROC, "predictions.parquet"), index=False)
+    # production stage 2: every completed season from 2016 (current, in-progress season excluded)
+    cur = int(G.season.max())
+    done = sorted(s for s in G.season.unique() if 2016 <= s < cur)
+    s2 = fit_stage2(G, done)
+    print("production stage-2 fit on", done[0], "-", done[-1])
+    print({k: round(v, 3) for k, v in s2["margin"].params.items()})
+    print({k: round(v, 3) for k, v in s2["total"].params.items()})
     print("sigma margin %.2f total %.2f" % (s2["sig_m"], s2["sig_t"]))
-    G = apply_stage2(G, s2)
-    G.to_parquet(os.path.join(PROC, "predictions.parquet"), index=False)
     pd.to_pickle(s2, os.path.join(PROC, "stage2.pkl"))
-    return G
+    return P
 
 
 if __name__ == "__main__":

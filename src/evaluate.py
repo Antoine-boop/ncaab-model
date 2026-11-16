@@ -30,6 +30,7 @@ POOLS = {"open": [2016, 2017, 2024, 2025, 2026], "close": list(range(2016, 2023)
 TESTS = {"open": [2024, 2025, 2026, 2027], "close": [2024, 2025, 2026, 2027]}
 THRESHOLDS = [0.0, 0.02, 0.03, 0.04, 0.06, 0.08]
 MIN_EDGE_PTS = {"spread": 1.5, "total": 2.0}   # model must disagree with the number, not just the price
+MISMATCH = 20.0
 
 
 def add_rest(G):
@@ -68,6 +69,10 @@ def run():
     B = pd.concat(allb)
     for mk, mn in MIN_EDGE_PTS.items():
         B.loc[(B.market == mk) & ~(B.edge_pts >= mn), "ev"] = -np.inf
+    # mismatch exclusion (|opening spread| >= 20): edge unreliable on VAL openers + 2018-23 snapshots (E12)
+    big = B.game_id.map(G.set_index("game_id").pipe(lambda x: x.index.to_series()).map(
+        dict(zip(G.game_id, np.abs(Mo.spread.to_numpy())))))
+    B.loc[(big >= MISMATCH).fillna(False).to_numpy() & B.market.isin(["spread", "total"]).to_numpy(), "ev"] = -np.inf
     # attach CLV / context
     ctx = G[["game_id", "min_rest", "margin", "total_pts"]].copy()
     ctx["mo_spread"], ctx["mc_spread"] = Mo.spread.to_numpy(), Mc.spread.to_numpy()
